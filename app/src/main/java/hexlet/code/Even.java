@@ -15,9 +15,9 @@ public class Even {
         int count = 0;
         for (int i = 0; i < 3; i++) {
             var randomNumber = random.nextInt(100);
-            if (randomNumber == 0)
+            if (randomNumber == 0) {
                 randomNumber += 1;
-
+            }
             System.out.println("Question: " + randomNumber);
             var evenlyOrNot = scanner.next();
             System.out.println("Your answer: " + evenlyOrNot);
