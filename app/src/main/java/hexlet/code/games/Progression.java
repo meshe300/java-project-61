@@ -7,20 +7,26 @@ public class Progression {
     public static boolean progression() {
 
         int numbersMax = 10;
-        int boundMax = 100;
-        int randomCountBoundMax = 5;
-        int randomPositionBoundMax = 9;
 
         int[] numbers = new int[numbersMax];
         var scanner = new Scanner(System.in);
         var random = new Random();
+
+        int boundMax = 100;
+
         var number = random.nextInt(1, boundMax);
         numbers[0] = number;
+
+        int randomCountBoundMax = 5;
+
         var randomCount = random.nextInt(1, randomCountBoundMax);
         System.out.print("Question: ");
         for (var j = 1; j < numbers.length; j++) {
             numbers[j] = numbers[j - 1] + randomCount;
         }
+
+        int randomPositionBoundMax = 9;
+
         var randomPosition = random.nextInt(randomPositionBoundMax);
         for (int j = 0; j < numbers.length; j++) {
             if (j == randomPosition) {
