@@ -7,8 +7,8 @@ public class Prime {
     public static boolean prime() {
         var scanner = new Scanner(System.in);
         var randomNumber = new Random();
-        int[] listPrimNumbers = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73,
-                79, 83, 89, 97};
+        int[] listPrimNumbers = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83,
+            89, 97};
         var number = randomNumber.nextInt(2, 100);
         System.out.println("Question: " + number);
         var answer = scanner.next();
