@@ -4,24 +4,24 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Progression {
-    private static final int maxRandomNumbers = 100;
-    private static final int maxNumbers = 10;;
-    private static final int maxDifference = 5;
-    private static final int maxPosition = 9;
+    private static final int MaxRandomNumbers = 100;
+    private static final int MaxNumbers = 10;;
+    private static final int MaxDifference = 5;
+    private static final int MaxPosition = 9;
 
     public static boolean progression() {
 
-        int[] numbers = new int[maxNumbers];
+        int[] numbers = new int[MaxNumbers];
         var scanner = new Scanner(System.in);
         var random = new Random();
-        var number = random.nextInt(1, maxRandomNumbers);
+        var number = random.nextInt(1, MaxRandomNumbers);
         numbers[0] = number;
-        var randomCount = random.nextInt(1, maxDifference);
+        var randomCount = random.nextInt(1, MaxDifference);
         System.out.print("Question: ");
         for (var j = 1; j < numbers.length; j++) {
             numbers[j] = numbers[j - 1] + randomCount;
         }
-        var randomPosition = random.nextInt(maxPosition);
+        var randomPosition = random.nextInt(MaxPosition);
         for (int j = 0; j < numbers.length; j++) {
             if (j == randomPosition) {
                 System.out.print(".. ");
