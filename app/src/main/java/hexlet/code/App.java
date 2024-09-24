@@ -1,10 +1,5 @@
 package hexlet.code;
 
-import hexlet.code.games.Calc;
-import hexlet.code.games.Even;
-import hexlet.code.games.GCD;
-import hexlet.code.games.Progression;
-
 import java.util.Scanner;
 
 public class App {
@@ -16,19 +11,14 @@ public class App {
         System.out.println("3 - Calc");
         System.out.println("4 - GCD");
         System.out.println("5 - Progression");
+        System.out.println("6 - Prime");
         System.out.println("0 - Exit");
-        var numberGame = scan.next();
+        var numberGame = scan.nextInt();
         System.out.println("Your choice: " + numberGame);
-        if (numberGame.equals("1")) {
-            Cli.startGame();
-        } else if (numberGame.equals("2")) {
-            Even.startGame();
-        } else if (numberGame.equals("3")) {
-            Calc.startGame();
-        } else if (numberGame.equals("4")) {
-            GCD.gcd();
-        } else if (numberGame.equals("5")) {
-            Progression.progression();
+        if (numberGame == 1) {
+            Cli.cli();
+        } else if (numberGame > 1) {
+            Engine.game(numberGame);
         }
     }
 }
