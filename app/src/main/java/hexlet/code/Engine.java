@@ -15,7 +15,7 @@ public class Engine {
         var scanner = new Scanner(System.in);
         var name = scanner.next();
         System.out.println("Hello, " + name + "!");
-        var count = 3;
+        var count = 0;
         for (int i = 0; i < 3; i++) {
             if (numberGame == 2) {
                 var res2  = Even.even();
