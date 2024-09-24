@@ -6,28 +6,28 @@ import java.util.Scanner;
 public class Progression {
     public static boolean progression() {
 
-        int numbersMax = 10;
+        int numberOfNumbersInProgression = 10;
 
-        int[] numbers = new int[numbersMax];
+        int[] numbers = new int[numberOfNumbersInProgression];
         var scanner = new Scanner(System.in);
         var random = new Random();
 
-        int boundMax = 100;
+        int caseOfLimitNumbers = 100;
 
-        var number = random.nextInt(1, boundMax);
+        var number = random.nextInt(1, caseOfLimitNumbers);
         numbers[0] = number;
 
-        int randomCountBoundMax = 5;
+        int randomDifferenceInNumbers = 5;
 
-        var randomCount = random.nextInt(1, randomCountBoundMax);
+        var randomCount = random.nextInt(1, randomDifferenceInNumbers);
         System.out.print("Question: ");
         for (var j = 1; j < numbers.length; j++) {
             numbers[j] = numbers[j - 1] + randomCount;
         }
 
-        int randomPositionBoundMax = 9;
+        int randomPositionLimit = 9;
 
-        var randomPosition = random.nextInt(randomPositionBoundMax);
+        var randomPosition = random.nextInt(randomPositionLimit);
         for (int j = 0; j < numbers.length; j++) {
             if (j == randomPosition) {
                 System.out.print(".. ");
