@@ -4,10 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Prime {
+    private static final int MAX_RANDOM = 100;
+
     public static boolean prime() {
         var scanner = new Scanner(System.in);
         var randomNumber = new Random();
-        var number = randomNumber.nextInt(2, 100);
+        var number = randomNumber.nextInt(2, MAX_RANDOM);
         System.out.println("Question: " + number);
         var answer = scanner.next();
         System.out.println("Your answer: " + answer);

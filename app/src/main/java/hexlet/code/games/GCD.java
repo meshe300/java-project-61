@@ -4,11 +4,13 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GCD {
+    private static final int MAX_RANDOM = 100;
+
     public static boolean gcd() {
         var random = new Random();
         var scanner = new Scanner(System.in);
-        var numberFirst = random.nextInt(0, 100);
-        var numberSecond = random.nextInt(0, 100);
+        var numberFirst = random.nextInt(0, MAX_RANDOM);
+        var numberSecond = random.nextInt(0, MAX_RANDOM);
         var res = 1;
         if (numberFirst > numberSecond) {
             for (int j = numberSecond; j > 1; j--) {

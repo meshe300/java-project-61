@@ -4,10 +4,12 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Even {
+    private static final int MAX_RANDOM = 100;
+
     public static boolean even() {
         var scanner = new Scanner(System.in);
         var random = new Random();
-        var randomNumber = random.nextInt(1, 100);
+        var randomNumber = random.nextInt(1, MAX_RANDOM);
         System.out.println("Question: " + randomNumber);
         var evenlyOrNot = scanner.next();
         System.out.println("Your answer: " + evenlyOrNot);
