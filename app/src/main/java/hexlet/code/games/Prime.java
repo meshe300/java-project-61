@@ -7,21 +7,21 @@ public class Prime {
     public static boolean prime() {
         var scanner = new Scanner(System.in);
         var randomNumber = new Random();
-        int[] listPrimNumbers = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83,
-            89, 97};
         var number = randomNumber.nextInt(2, 100);
         System.out.println("Question: " + number);
         var answer = scanner.next();
         System.out.println("Your answer: " + answer);
-        var count = 0;
-        for (int i = 0; i < listPrimNumbers.length; i++) {
-            if (answer.equals("yes") && number == listPrimNumbers[i]) {
-                System.out.println("Correct!");
-                return true;
+        var res = false;
+        for (int i = 2; i < number; i++) {
+            if (number % i == 0) {
+                res = true;
+                break;
             }
-            count++;
         }
-        if (answer.equals("no") && count == listPrimNumbers.length) {
+        if (!res && answer.equals("yes")) {
+            System.out.println("Correct!");
+            return true;
+        } else if (res && answer.equals("no")) {
             System.out.println("Correct!");
             return true;
         } else {
