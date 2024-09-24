@@ -5,10 +5,12 @@ import java.util.Scanner;
 
 public class Progression {
     public static boolean progression() {
+
         int numbersMax = 10;
         int boundMax = 100;
         int randomCountBoundMax = 5;
         int randomPositionBoundMax = 9;
+
         int[] numbers = new int[numbersMax];
         var scanner = new Scanner(System.in);
         var random = new Random();
