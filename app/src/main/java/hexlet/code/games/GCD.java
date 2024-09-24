@@ -33,7 +33,6 @@ public class GCD {
         } else if (numberFirst == numberSecond) {
             res = numberFirst;
         }
-        System.out.println("Find the greatest common divisor of given numbers.");
         System.out.println("Question: " + numberFirst + " " + numberSecond);
         var answer = scanner.nextInt();
         System.out.println("Your answer: " + answer);

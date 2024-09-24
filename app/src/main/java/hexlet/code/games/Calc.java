@@ -12,7 +12,6 @@ public class Calc {
         var numberFirst = random.nextInt(1, 100);
         var numberSecond = random.nextInt(1, 100);
         var symbol = symbols[position];
-        System.out.println("What is the result of the expression?");
         System.out.println("Question: " + numberFirst + " " + symbol + " " + numberSecond);
         var res = 0;
         if (symbol == '+') {

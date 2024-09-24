@@ -11,7 +11,6 @@ public class Progression {
         var number = random.nextInt(1, 100);
         numbers[0] = number;
         var randomCount = random.nextInt(1, 5);
-        System.out.println("What number is missing in the progression?");
         System.out.print("Question: ");
         for (var j = 1; j < numbers.length; j++) {
             numbers[j] = numbers[j - 1] + randomCount;

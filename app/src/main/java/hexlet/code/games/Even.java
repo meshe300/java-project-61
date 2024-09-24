@@ -8,7 +8,6 @@ public class Even {
         var scanner = new Scanner(System.in);
         var random = new Random();
         var randomNumber = random.nextInt(1, 100);
-        System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         System.out.println("Question: " + randomNumber);
         var evenlyOrNot = scanner.next();
         System.out.println("Your answer: " + evenlyOrNot);
