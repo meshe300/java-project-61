@@ -80,7 +80,7 @@ public class Engine {
                 }
             }
         }
-        if (count == 3) {
+        if (count == COUNT) {
             System.out.println("Congratulations, " + name + "!");
         }
     }
