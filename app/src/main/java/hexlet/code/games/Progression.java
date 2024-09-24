@@ -18,7 +18,7 @@ public class Progression {
         var randomPosition = random.nextInt(9);
         for (int j = 0; j < numbers.length; j++) {
             if (j == randomPosition) {
-                System.out.print("... ");
+                System.out.print(".. ");
                 continue;
             }
             System.out.print(numbers[j] + " ");
