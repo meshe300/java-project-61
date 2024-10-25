@@ -22,7 +22,7 @@ public class GCD {
             answer = Integer.toString(game(numberFirst, numberSecond));
             questionAndAnswer[i][1] = answer;
         }
-        Engine.engine(RULE,questionAndAnswer);
+        Engine.engine(RULE, questionAndAnswer);
     }
     public static int game(int numberFirst, int numberSecond) {
         var result = 1;

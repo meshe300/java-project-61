@@ -20,7 +20,7 @@ public class Even {
             answer = game(randomNumber);
             questionAndAnswer[i][1] = answer;
         }
-        Engine.engine(RULE,questionAndAnswer);
+        Engine.engine(RULE, questionAndAnswer);
     }
 
     public static String game(int number) {

@@ -25,7 +25,7 @@ public class Calc {
             answer = Integer.toString(game(numberFirst, numberSecond, symbol));
             questionAndAnswer[i][1] = answer;
         }
-        Engine.engine(RULE,questionAndAnswer);
+        Engine.engine(RULE, questionAndAnswer);
     }
     public static int game(int numberFirst, int numberSecond, String symbol) {
         int result = 0;
@@ -38,6 +38,8 @@ public class Calc {
                 break;
             case "*":
                 result = numberFirst * numberSecond;
+                break;
+            default:
                 break;
         }
         return result;

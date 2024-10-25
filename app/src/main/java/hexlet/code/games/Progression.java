@@ -37,7 +37,7 @@ public class Progression {
             questionAndAnswer[i][0] = question;
             questionAndAnswer[i][1] = answer;
         }
-        Engine.engine(RULE,questionAndAnswer);
+        Engine.engine(RULE, questionAndAnswer);
     }
     public static int game(int[] numbers, int position) {
         return  numbers[position];

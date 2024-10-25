@@ -21,7 +21,7 @@ public class Prime {
             answer = game(number);
             questionAndAnswer[i][1] = answer;
         }
-        Engine.engine(RULE,questionAndAnswer);
+        Engine.engine(RULE, questionAndAnswer);
     }
     public static String game(int number) {
         String answer = "yes";
