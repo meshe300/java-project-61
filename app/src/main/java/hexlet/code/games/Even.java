@@ -1,13 +1,12 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-
 import java.util.Random;
 
 public class Even {
     private static final int MAX_RANDOM = 100;
     private static final int COUNT = 3;
-    private  static final String RULE = "What is the result of the expression?";
+    private  static final String RULE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
     public static void even() {
         var random = new Random();
