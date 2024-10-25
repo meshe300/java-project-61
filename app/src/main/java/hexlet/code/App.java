@@ -8,6 +8,13 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
+    private static final int CLI_NUMBER = 1;
+    private static final int EVEN_NUMBER = 2;
+    private static final int CALC_NUMBER = 3;
+    private static final int GCD_NUMBER = 4;
+    private static final int PROGRESSION_NUMBER = 5;
+    private static final int PRIME_NUMBER = 6;
+
     public static void main(String[] args) {
         var scan = new Scanner(System.in);
         System.out.println("Please enter the game number and press Enter.");
@@ -21,22 +28,22 @@ public class App {
         var numberGame = scan.nextInt();
         System.out.println("Your choice: " + numberGame);
         switch (numberGame) {
-            case 1:
+            case CLI_NUMBER:
                 Cli.cli();
                 break;
-            case 2:
+            case EVEN_NUMBER:
                 Even.even();
                 break;
-            case 3:
+            case CALC_NUMBER:
                 Calc.calc();
                 break;
-            case 4:
+            case GCD_NUMBER:
                 GCD.gcd();
                 break;
-            case 5:
+            case PROGRESSION_NUMBER:
                 Progression.progression();
                 break;
-            case 6:
+            case PRIME_NUMBER:
                 Prime.prime();
                 break;
             default:
