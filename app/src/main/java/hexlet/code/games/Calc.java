@@ -1,37 +1,45 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 import java.util.Random;
-import java.util.Scanner;
 
 public class Calc {
     private static final int MAX_RANDOM = 100;
-    private static final int MAX_POSITION = 3;
+    private static final int SYMBOL_COUNT = 3;
+    private static final int COUNT = 3;
+    private  static final String RULE = "What is the result of the expression?";
 
-    public static boolean calc() {
-        var scanner = new Scanner(System.in);
+    public static void calc() {
         var random = new Random();
-        char[] symbols = {'+', '-', '*'};
-        var position = random.nextInt(MAX_POSITION);
-        var numberFirst = random.nextInt(1, MAX_RANDOM);
-        var numberSecond = random.nextInt(1, MAX_RANDOM);
-        var symbol = symbols[position];
-        System.out.println("Question: " + numberFirst + " " + symbol + " " + numberSecond);
-        var res = 0;
-        if (symbol == '+') {
-            res = numberFirst + numberSecond;
-        } else if (symbol == '-') {
-            res = numberFirst - numberSecond;
-        } else if (symbol == '*') {
-            res = numberFirst * numberSecond;
+        String[] symbols = {"+", "-", "*"};
+        String[][] questionAndAnswer = new String[COUNT][2];
+        String question;
+        String answer;
+        for (int i = 0; i < COUNT; i++) {
+            var position = random.nextInt(SYMBOL_COUNT);
+            var numberFirst = random.nextInt(1, MAX_RANDOM);
+            var numberSecond = random.nextInt(1, MAX_RANDOM);
+            var symbol = symbols[position];
+            question = numberFirst + " " + symbol + " " + numberSecond;
+            questionAndAnswer[i][0] = question;
+            answer = Integer.toString(game(numberFirst, numberSecond, symbol));
+            questionAndAnswer[i][1] = answer;
         }
-        var answer = scanner.nextInt();
-        System.out.println("Your answer: " + answer);
-        if (answer == res) {
-            System.out.println("Correct!");
-            return true;
-        } else {
-            System.out.println("'" + answer + "' is wrong answer ;(. Correct answer was '" + res + "'.");
-            return false;
+        Engine.engine(RULE,questionAndAnswer);
+    }
+    public static int game(int numberFirst, int numberSecond, String symbol) {
+        int result = 0;
+        switch (symbol) {
+            case "+":
+                result = numberFirst + numberSecond;
+                break;
+            case "-":
+                result = numberFirst - numberSecond;
+                break;
+            case "*":
+                result = numberFirst * numberSecond;
+                break;
         }
+        return result;
     }
 }
