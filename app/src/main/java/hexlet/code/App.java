@@ -1,5 +1,7 @@
 package hexlet.code;
 
+import hexlet.code.games.*;
+
 import java.util.Scanner;
 
 public class App {
@@ -15,10 +17,25 @@ public class App {
         System.out.println("0 - Exit");
         var numberGame = scan.nextInt();
         System.out.println("Your choice: " + numberGame);
-        if (numberGame == 1) {
-            Cli.cli();
-        } else if (numberGame > 1) {
-            Engine.game(numberGame);
+        switch (numberGame) {
+            case 1:
+                Cli.cli();
+                break;
+            case 2:
+                Even.even();
+                break;
+            case 3:
+                Calc.calc();
+                break;
+            case 4:
+                GCD.gcd();
+                break;
+            case 5:
+                Progression.progression();
+                break;
+            case 6:
+                Prime.prime();
+                break;
         }
     }
 }
