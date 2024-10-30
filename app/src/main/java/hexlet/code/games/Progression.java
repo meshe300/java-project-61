@@ -6,6 +6,7 @@ import java.util.Random;
 public class Progression {
     private static final int MAX_RANDOM = 100;
     private static final int MAX_NUMBERS = 10;;
+    private static final int MIN_NUMBERS = 5;
     private static final int MAX_DIFFERENCE = 5;
     private static final int COUNT = 3;
     private  static final String RULE = "What number is missing in the progression?";
@@ -16,7 +17,7 @@ public class Progression {
         String answer;
         for (int i = 0; i < COUNT; i++) {
             String question = "";
-            var maxProgression = random.nextInt(5, MAX_NUMBERS);
+            var maxProgression = random.nextInt(MIN_NUMBERS, MAX_NUMBERS);
             var randomCount = random.nextInt(1, MAX_DIFFERENCE);
             var firstNumber = random.nextInt(1, MAX_RANDOM);
             int[] numbers = progression(maxProgression, randomCount, firstNumber);
