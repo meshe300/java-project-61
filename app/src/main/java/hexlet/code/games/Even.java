@@ -8,27 +8,29 @@ public class Even {
     private static final int COUNT = 3;
     private  static final String RULE = "Answer 'yes' if the number is even, otherwise answer 'no'.";
 
-    public static void even() {
+    public static void game() {
         var random = new Random();
         String[][] questionAndAnswer = new String[COUNT][2];
         String question;
-        String answer;
+        String answer = "";
         for (int i = 0; i < COUNT; i++) {
             var randomNumber = random.nextInt(1, MAX_RANDOM);
             question = Integer.toString(randomNumber);
             questionAndAnswer[i][0] = question;
-            answer = game(randomNumber);
+            if (even(randomNumber)) {
+                answer = "yes";
+            } else {
+                answer = "no";
+            }
             questionAndAnswer[i][1] = answer;
         }
         Engine.engine(RULE, questionAndAnswer);
     }
 
-    public static String game(int number) {
-        String result = "";
+    private static boolean even(int number) {
+        boolean result = true;
         if (number == 1 || (number % 2) == 1) {
-            result = "no";
-        } else if ((number % 2) == 0) {
-            result = "yes";
+            result = false;
         }
         return result;
     }

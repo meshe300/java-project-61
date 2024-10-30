@@ -9,7 +9,7 @@ public class Calc {
     private static final int COUNT = 3;
     private  static final String RULE = "What is the result of the expression?";
 
-    public static void calc() {
+    public static void game() {
         var random = new Random();
         String[] symbols = {"+", "-", "*"};
         String[][] questionAndAnswer = new String[COUNT][2];
@@ -22,12 +22,12 @@ public class Calc {
             var symbol = symbols[position];
             question = numberFirst + " " + symbol + " " + numberSecond;
             questionAndAnswer[i][0] = question;
-            answer = Integer.toString(game(numberFirst, numberSecond, symbol));
+            answer = Integer.toString(calculate(numberFirst, numberSecond, symbol));
             questionAndAnswer[i][1] = answer;
         }
         Engine.engine(RULE, questionAndAnswer);
     }
-    public static int game(int numberFirst, int numberSecond, String symbol) {
+    private static int calculate(int numberFirst, int numberSecond, String symbol) {
         int result = 0;
         switch (symbol) {
             case "+":
@@ -40,7 +40,7 @@ public class Calc {
                 result = numberFirst * numberSecond;
                 break;
             default:
-                break;
+                return 0;
         }
         return result;
     }

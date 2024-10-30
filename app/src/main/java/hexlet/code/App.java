@@ -32,19 +32,19 @@ public class App {
                 Cli.cli();
                 break;
             case EVEN_NUMBER:
-                Even.even();
+                Even.game();
                 break;
             case CALC_NUMBER:
-                Calc.calc();
+                Calc.game();
                 break;
             case GCD_NUMBER:
-                GCD.gcd();
+                GCD.game();
                 break;
             case PROGRESSION_NUMBER:
-                Progression.progression();
+                Progression.game();
                 break;
             case PRIME_NUMBER:
-                Prime.prime();
+                Prime.game();
                 break;
             default:
                 break;
