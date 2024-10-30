@@ -27,8 +27,8 @@ public class Calc {
         }
         Engine.engine(RULE, questionAndAnswer);
     }
-    private static int calculate(int numberFirst, int numberSecond, String symbol) {
-        int result = 0;
+    private static Integer calculate(int numberFirst, int numberSecond, String symbol) {
+        Integer result = null;
         switch (symbol) {
             case "+":
                 result = numberFirst + numberSecond;
@@ -40,7 +40,7 @@ public class Calc {
                 result = numberFirst * numberSecond;
                 break;
             default:
-                return 0;
+                break;
         }
         return result;
     }
