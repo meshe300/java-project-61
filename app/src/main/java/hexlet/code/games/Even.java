@@ -17,7 +17,7 @@ public class Even {
             var randomNumber = random.nextInt(1, MAX_RANDOM);
             question = Integer.toString(randomNumber);
             questionAndAnswer[i][0] = question;
-            if (even(randomNumber)) {
+            if (isEven(randomNumber)) {
                 answer = "yes";
             } else {
                 answer = "no";
@@ -27,7 +27,7 @@ public class Even {
         Engine.engine(RULE, questionAndAnswer);
     }
 
-    private static boolean even(int number) {
+    private static boolean isEven(int number) {
         boolean result = true;
         if (number == 1 || (number % 2) == 1) {
             result = false;

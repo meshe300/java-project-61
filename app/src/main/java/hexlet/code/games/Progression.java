@@ -20,23 +20,21 @@ public class Progression {
             var maxProgression = random.nextInt(MIN_NUMBERS, MAX_NUMBERS);
             var randomCount = random.nextInt(1, MAX_DIFFERENCE);
             var firstNumber = random.nextInt(1, MAX_RANDOM);
-            int[] numbers = progression(maxProgression, randomCount, firstNumber);
+            int[] numbers = creatingProgression(maxProgression, randomCount, firstNumber);
             var randomPosition = random.nextInt(maxProgression);
             answer = Integer.toString(numbers[randomPosition]);
             String[] skipList = new String[maxProgression];
             for (int j = 0; j < skipList.length; j++) {
                 skipList[j] = Integer.toString(numbers[j]);
-                if (j == randomPosition) {
-                    skipList[j] = "..";
-                }
-                question += skipList[j] + " ";
             }
+            skipList[randomPosition] = "..";
+            question = String.join(" ", skipList);
             questionAndAnswer[i][0] = question;
             questionAndAnswer[i][1] = answer;
         }
         Engine.engine(RULE, questionAndAnswer);
     }
-    private static int[] progression(int maxProgression, int randomCount, int firstNumber) {
+    private static int[] creatingProgression(int maxProgression, int randomCount, int firstNumber) {
         int[] numbers = new int[maxProgression];
         numbers[0] = firstNumber;
         for (var j = 1; j < numbers.length; j++) {

@@ -22,12 +22,13 @@ public class Calc {
             var symbol = symbols[position];
             question = numberFirst + " " + symbol + " " + numberSecond;
             questionAndAnswer[i][0] = question;
-            answer = Integer.toString(calculate(numberFirst, numberSecond, symbol));
+            answer = Integer.toString(creatingCalculate(numberFirst, numberSecond, symbol));
             questionAndAnswer[i][1] = answer;
         }
         Engine.engine(RULE, questionAndAnswer);
     }
-    private static Integer calculate(int numberFirst, int numberSecond, String symbol) {
+
+    private static Integer creatingCalculate(int numberFirst, int numberSecond, String symbol) {
         Integer result = null;
         switch (symbol) {
             case "+":

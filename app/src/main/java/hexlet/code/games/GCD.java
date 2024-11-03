@@ -19,13 +19,13 @@ public class GCD {
             var numberSecond = random.nextInt(1, MAX_RANDOM);
             question = numberFirst + " " + numberSecond;
             questionAndAnswer[i][0] = question;
-            answer = Integer.toString(gcd(numberFirst, numberSecond));
+            answer = Integer.toString(creatinGcd(numberFirst, numberSecond));
             questionAndAnswer[i][1] = answer;
         }
         Engine.engine(RULE, questionAndAnswer);
     }
 
-    private static int gcd(int a, int b) {
-        return b == 0 ? a : gcd(b, a % b);
+    private static int creatinGcd(int a, int b) {
+        return b == 0 ? a : creatinGcd(b, a % b);
     }
 }

@@ -18,19 +18,23 @@ public class Prime {
             var number = randomNumber.nextInt(2, MAX_RANDOM);
             question = Integer.toString(number);
             questionAndAnswer[i][0] = question;
-            answer = prime(number);
+            if (isPrime(number)) {
+                answer = "yes";
+            } else {
+                answer = "no";
+            }
             questionAndAnswer[i][1] = answer;
         }
         Engine.engine(RULE, questionAndAnswer);
     }
-    private static String prime(int number) {
-        String answer = "yes";
+    private static boolean isPrime(int number) {
+        boolean result = true;
         for (int i = 2; i < number; i++) {
             if (number % i == 0) {
-                answer = "no";
+                result = false;
                 break;
             }
         }
-        return answer;
+        return result;
     }
 }
