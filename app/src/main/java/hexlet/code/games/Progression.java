@@ -34,6 +34,7 @@ public class Progression {
         }
         Engine.engine(RULE, questionAndAnswer);
     }
+
     private static int[] creatingProgression(int maxProgression, int randomCount, int firstNumber) {
         int[] numbers = new int[maxProgression];
         numbers[0] = firstNumber;
